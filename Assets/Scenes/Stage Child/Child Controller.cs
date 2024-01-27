@@ -13,6 +13,9 @@ public class ChildController : MonoBehaviour
     [SerializeField] private float m_SpeedMultiplier;
     [SerializeField] Vector2 m_Move;
 
+    [SerializeField] LayerMask m_FloorLayer;
+    [SerializeField] private float m_RaycastFloorDistance = 0.5f;
+
     void Start()
     {
         this.m_rb = GetComponent<Rigidbody2D>();
@@ -25,18 +28,26 @@ public class ChildController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && this.m_InteractableCard != null)
         {
-            this.m_InteractableCard.OnCardInteract();
+            this.m_InteractableCard.OnCardInteract(this.gameObject);
         }
+
+        
     }
 
     void FixedUpdate()
     {
-        if (m_Move.x != 0.0f)
+        if (!Physics2D.Raycast(this.transform.position, Vector2.down, this.m_RaycastFloorDistance, m_FloorLayer))
         {
-            //Debug.Log(m_Move.x);
-
-            this.m_rb.velocity = this.m_Move * m_SpeedMultiplier * Time.deltaTime;
+            this.m_Move.y = -5f;
         }
+        else
+        {
+            this.m_Move.y = 0f;
+        }
+
+
+        this.m_rb.AddForce(m_Move * m_SpeedMultiplier * Time.deltaTime);
+        //this.m_rb.velocity = this.m_Move * m_SpeedMultiplier * Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D hit)
@@ -50,7 +61,10 @@ public class ChildController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D hit)
     {
-        this.m_InteractableCard.HighlightCard(false);
-        this.m_InteractableCard = null;
+        if (this.m_InteractableCard != null)
+        {
+            this.m_InteractableCard.HighlightCard(false);
+            this.m_InteractableCard = null;
+        }
     }
 }

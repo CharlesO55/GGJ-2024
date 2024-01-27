@@ -8,7 +8,10 @@ public class InteractableCard: MonoBehaviour
     [SerializeField] private float m_flipTime = 0.5f;
     private bool m_isHighlighted = false;
 
-    public virtual void OnCardInteract(){}
+    public virtual void OnCardInteract(GameObject sender)
+    {
+        Debug.Log("Interacted with card: " + this.name);
+    }
 
     public void HighlightCard(bool ToF)
     {
