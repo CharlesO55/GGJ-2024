@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068218501cb2ab048a5bebee1bc53eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_image: {fileID: 0}
+  m_image: {fileID: 10900, guid: 0000000000000000f000000000000000, type: 0}
   m_title: Another Chance
   m_description: I wanna go back in
   m_IsFailTrigger: 0
