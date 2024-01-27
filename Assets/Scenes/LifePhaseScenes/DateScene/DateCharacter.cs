@@ -15,6 +15,8 @@ public class DateCharacter : MonoBehaviour
 
     SpriteRenderer m_spriteRenderer;
 
+    [SerializeField] private GameObject m_Child;
+
     void Start()
     {
         this.m_audioPlayer = this.GetComponent<AudioSource>();
@@ -22,15 +24,39 @@ public class DateCharacter : MonoBehaviour
 
         this.m_spriteRenderer = this.GetComponent<SpriteRenderer>();
 
+
+        this.m_Child = this.transform.GetChild(0).gameObject;
     }
 
 
     void Update()
     {
-        if(m_spriteRenderer.isVisible)
-
+        if (m_audioPlayer.isPlaying)
         {
-            Debug.Log("Visible: ");
+            this.m_playbackTime = this.m_audioPlayer.time + 1;
+            if (this.m_playbackTime >= this.m_Dialogue.length)
+            {
+                Debug.Log("Completed audio" + m_Dialogue.name);
+            }
+        }
+
+        if (m_spriteRenderer.isVisible && !this.m_audioPlayer.isPlaying)
+        {
+            Debug.Log("Start");
+
+            this.m_Child.SetActive(true);
+
+            this.m_audioPlayer.time = this.m_playbackTime - 1;
+            this.m_audioPlayer.Play();
+        }
+
+        else if (!m_spriteRenderer.isVisible && this.m_Child.activeInHierarchy)
+        {
+            Debug.Log("Stop");
+
+            this.m_Child.SetActive(false);
+
+            this.m_audioPlayer.Stop();
         }
     }
 }
