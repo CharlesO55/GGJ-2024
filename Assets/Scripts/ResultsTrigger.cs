@@ -15,6 +15,8 @@ public class ResultsTrigger : MonoBehaviour
     [Header("Next scene if Pass/Success")]
     [SerializeField] private int m_nextSceneIndex;
 
+    [SerializeField] private bool m_IsActivateOnTriggerEnter = false;
+
     public void ActivateResultsTrigger()
     {
         if (m_IsFailTrigger)
@@ -25,5 +27,11 @@ public class ResultsTrigger : MonoBehaviour
         {
             ResultsScreenManager.Instance.ShowPassResult(m_title, m_description, m_image, m_nextSceneIndex);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (this.m_IsActivateOnTriggerEnter)
+            this.ActivateResultsTrigger();
     }
 }

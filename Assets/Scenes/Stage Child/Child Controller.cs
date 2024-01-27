@@ -54,8 +54,10 @@ public class ChildController : MonoBehaviour
     {
         if (hit.CompareTag("PlatformerInteractable"))
         {
-            hit.gameObject.TryGetComponent<InteractableCard>(out this.m_InteractableCard);
-            this.m_InteractableCard.HighlightCard(true);
+            if (hit.gameObject.TryGetComponent<InteractableCard>(out this.m_InteractableCard))
+            {
+                this.m_InteractableCard.HighlightCard(true);
+            }
         }
     }
 
