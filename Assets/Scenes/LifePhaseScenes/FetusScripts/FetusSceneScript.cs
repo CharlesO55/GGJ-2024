@@ -11,7 +11,6 @@ public class FetusSceneScript : MonoBehaviour
     public static event EventHandler OnSpacePressed;
     public static event EventHandler OnPhaseEnd;
     private int progression = 0;
-    private int maxProgression = 5;
 
     [SerializeField] private TextMeshProUGUI progressionUI;
     [SerializeField] private Image fetusBackgroundImage;
@@ -27,6 +26,7 @@ public class FetusSceneScript : MonoBehaviour
         progression -= 2;
         progression = Mathf.Clamp(progression ,0, 3);
         progressionUI.text = progression.ToString();
+        ScreenShake.Instance.ShakeScreen(0.04f);
         // todo - fetusBackgroundImage.sprite = fetusSprite[progression];
     }
 
