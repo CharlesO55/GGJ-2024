@@ -14,9 +14,12 @@ public class FetusSceneScript : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI progressionUI;
     [SerializeField] private Image fetusBackgroundImage;
+    [SerializeField] private Sprite[] fetusStageSprites;
+    private bool _isFetusSpriteNotNull;
 
     private void Start()
     {
+        _isFetusSpriteNotNull = fetusStageSprites.Length == 4;
         FetusSpaceScript.OnInputSuccess += FetusBarScript_OnInputSuccess;
         FetusSpaceScript.OnInputFailed += FetusBarScript_OnInputFailed;
     }
@@ -27,7 +30,7 @@ public class FetusSceneScript : MonoBehaviour
         progression = Mathf.Clamp(progression ,0, 3);
         progressionUI.text = progression.ToString();
         ScreenShake.Instance.ShakeScreen(0.04f);
-        // todo - fetusBackgroundImage.sprite = fetusSprite[progression];
+        UpdateFetusStageSprite();
     }
 
     private void FetusBarScript_OnInputSuccess(object sender, EventArgs e)
@@ -35,12 +38,18 @@ public class FetusSceneScript : MonoBehaviour
         progression++;
         progression = Mathf.Clamp(progression ,0, 3);
         progressionUI.text = progression.ToString();
-        // todo - fetusBackgroundImage.sprite = fetusSprite[progression];
+        UpdateFetusStageSprite();
         if (CheckProgression())
         {
             OnPhaseEnd?.Invoke(this, EventArgs.Empty);
             //todo - sceneloader next scene
         }
+    }
+
+    void UpdateFetusStageSprite()
+    {
+        if(_isFetusSpriteNotNull)
+            fetusBackgroundImage.sprite = fetusStageSprites[progression];
     }
 
     void Update()

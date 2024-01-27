@@ -8,7 +8,6 @@ public class ScreenShake : MonoBehaviour
 {
     public static ScreenShake Instance { get; private set; }
     private CinemachineImpulseSource cinemachineImpulseSource;
-    [SerializeField] private float shakeIntensity;
 
     private void Awake()
     {
