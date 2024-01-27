@@ -1,0 +1,14 @@
+VisualElement {}
+
+
+#ResultImage{
+	--unity-image: url("/Assets/Scenes/testend.jpg");
+
+	align-self: center;
+	height: 720px;
+	width: 1280px;
+}
+
+.Margined{
+	margin: 10px;
+}

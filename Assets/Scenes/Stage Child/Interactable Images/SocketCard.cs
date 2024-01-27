@@ -14,6 +14,11 @@ public class SocketCard : InteractableCard
         if (hit.GetComponent<ForkCard>() != null)
         {
             Debug.LogWarning("DIED");
+
+            if (this.TryGetComponent<ResultsTrigger>(out ResultsTrigger results))
+            {
+                results.ActivateResultsTrigger();
+            }
         }
     }
 }

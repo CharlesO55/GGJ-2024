@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scenes/ResultsScreen.uss?fileID=7433441132597879392&amp;guid=b06b4c4fe425594439792b2d320696bd&amp;type=3#ResultsScreen" />
+    <ui:VisualElement name="Screen" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.74); display: none;">
+        <ui:Image name="ResultImage" class="Margined" />
+        <ui:Label tabindex="-1" text="Title" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Margined" style="-unity-text-align: upper-center; -unity-font-style: bold; color: rgb(255, 255, 255); font-size: 48px;" />
+        <ui:Label tabindex="-1" text="Body" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Body" class="Margined" style="-unity-text-align: upper-center; -unity-font-style: normal; color: rgb(255, 255, 255); font-size: 30px; flex-wrap: wrap; overflow: visible; flex-direction: column; text-overflow: ellipsis; white-space: normal;" />
+        <ui:VisualElement name="RestartButtons" style="flex-grow: 1; flex-direction: row; position: relative; justify-content: center; align-self: stretch; max-height: 50px; align-items: stretch;">
+            <ui:Button text="Restart Stage" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RestartStage" style="-unity-font-style: bold; font-size: 30px;" />
+            <ui:Button text="Restart Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RestartGame" style="-unity-font-style: bold; font-size: 30px;" />
+        </ui:VisualElement>
+        <ui:Button text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueBtn" style="-unity-font-style: bold; font-size: 30px; max-height: 50px; align-self: center;" />
+    </ui:VisualElement>
+</ui:UXML>
