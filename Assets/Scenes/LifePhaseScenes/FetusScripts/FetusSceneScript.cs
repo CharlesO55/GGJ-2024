@@ -11,6 +11,7 @@ public class FetusSceneScript : MonoBehaviour
     [SerializeField] private Sprite[] fetusStageSprites;
     private bool _isFetusSpriteNotNull;
 
+
     private void Start()
     {
         _isFetusSpriteNotNull = fetusStageSprites.Length == 3;
@@ -50,7 +51,6 @@ public class FetusSceneScript : MonoBehaviour
         {
             OnSpacePressed?.Invoke(this, EventArgs.Empty);
         }
-        
     }
 
     private bool CheckProgression()
