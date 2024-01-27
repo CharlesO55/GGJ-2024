@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -19,8 +16,7 @@ public class FetusSpaceScript : MonoBehaviour
     private float spaceTimerMax;
 
     [SerializeField] private GameObject spaceIndicator;
-    [SerializeField] private Image spaceIndicatorFill;
-    
+
     [Serializable]
     private struct TimerBounds
     {
@@ -30,6 +26,7 @@ public class FetusSpaceScript : MonoBehaviour
 
     [SerializeField] private TimerBounds timerBounds;
     [SerializeField] private TimerBounds spaceTimerBounds;
+    
     
     private void Awake()
     {
@@ -73,7 +70,6 @@ public class FetusSpaceScript : MonoBehaviour
             if (spaceTimer > 0)
             {
                 spaceTimer -= Time.deltaTime;
-                spaceIndicatorFill.fillAmount = Mathf.Abs((spaceTimer / spaceTimerMax)-1);
                 if(Input.GetKeyDown(KeyCode.Space))
                 {
                     spaceIndicator.SetActive(false);

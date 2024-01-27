@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OldManController : MonoBehaviour
@@ -44,5 +41,9 @@ public class OldManController : MonoBehaviour
     public void Kill()
     {
         gameObject.SetActive(false);
+        if (this.TryGetComponent<ResultsTrigger>(out ResultsTrigger results))
+        {
+            results.ActivateResultsTrigger();
+        }
     }
 }

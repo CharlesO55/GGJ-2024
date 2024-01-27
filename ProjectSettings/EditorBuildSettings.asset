@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage Child/StageChild.unity
     guid: 568bc2943cbfa634db24405974a754c1
+  - enabled: 1
+    path: Assets/Scenes/LifePhaseScenes/OldManScene.unity
+    guid: 0b9fd4fdd15be8f43887fc9ad1d796f0
   m_configObjects: {}

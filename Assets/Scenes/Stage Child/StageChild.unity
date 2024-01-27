@@ -964,7 +964,7 @@ MonoBehaviour:
   m_title: Good end
   m_description: Completed
   m_IsFailTrigger: 0
-  m_nextSceneIndex: 0
+  m_nextSceneIndex: 2
   m_IsActivateOnTriggerEnter: 1
 --- !u!1 &638648233
 GameObject:
