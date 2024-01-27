@@ -58,6 +58,7 @@ public class ResultsScreenManager : MonoBehaviour
         this.m_continueBtn = this.m_root.Q<Button>("ContinueBtn");
         this.m_continueBtn.RegisterCallback<ClickEvent>(evt =>
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene(this.m_nextSceneIndex);
         });
 
