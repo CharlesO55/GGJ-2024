@@ -26,6 +26,7 @@ public class FetusSceneScript : MonoBehaviour
         progression -= 2;
         progression = Mathf.Clamp(progression ,0, 3);
         progressionUI.text = progression.ToString();
+        ScreenShake.Instance.ShakeScreen(0.04f);
         // todo - fetusBackgroundImage.sprite = fetusSprite[progression];
     }
 
