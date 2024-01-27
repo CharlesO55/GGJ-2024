@@ -41,7 +41,10 @@ public class FetusSceneScript : MonoBehaviour
 
     void UpdateFetusStageSprite()
     {
-        if(_isFetusSpriteNotNull)
+        if (fetusBackgroundImage == null)
+            fetusBackgroundImage = GameObject.Find("Sprite_Fetus").GetComponent<SpriteRenderer>();
+
+        if (_isFetusSpriteNotNull)
             fetusBackgroundImage.sprite = fetusStageSprites[progression];
     }
 

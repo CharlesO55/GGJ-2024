@@ -399,6 +399,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &774059260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774059261}
+  - component: {fileID: 774059262}
+  - component: {fileID: 774059263}
+  m_Layer: 0
+  m_Name: FailCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774059261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774059260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.881424, y: 2.165214, z: -10.013062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774059262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774059260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fb3946d3a3fa043a621e3beb9ed516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_failedTimes: 0
+  m_reduceEverySeconds: 1
+  m_maxFailTimes: 10
+--- !u!114 &774059263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774059260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068218501cb2ab048a5bebee1bc53eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_image: {fileID: 2800000, guid: 49390d1237ea64b4383cf6d9b9cdeffa, type: 3}
+  m_title: Be gentle
+  m_description: Even baristas have standards
+  m_IsFailTrigger: 1
+  m_nextSceneIndex: 0
+  m_IsActivateOnTriggerEnter: 0
+  m_clipToPlayAtEnd: {fileID: 8300000, guid: 19f7fd2777a63184cbfa7c47df5c4ea6, type: 3}
 --- !u!1 &834098285
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +542,7 @@ MonoBehaviour:
   m_IsFailTrigger: 0
   m_nextSceneIndex: 1
   m_IsActivateOnTriggerEnter: 0
+  m_clipToPlayAtEnd: {fileID: 0}
 --- !u!1 &981127108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,3 +1644,4 @@ SceneRoots:
   - {fileID: 436381703}
   - {fileID: 981127110}
   - {fileID: 1915870114}
+  - {fileID: 774059261}

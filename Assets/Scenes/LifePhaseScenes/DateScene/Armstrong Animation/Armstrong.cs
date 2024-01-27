@@ -19,9 +19,9 @@ public class Armstrong : DateCharacter
         base.UpdatePlayProgress();
         base.CheckAudioPlaying();
 
-        Debug.Log(m_playbackRate);
+        //Debug.Log(m_playbackRate);
 
-        m_Animator.SetBool("IsEnding",  this.m_Dialogue.length - this.m_playbackTime < 1.5f);
+        m_Animator.SetBool("IsEnding",  this.m_Dialogue.length - this.m_playbackTime < 0.8f);
 
         this.m_audioPlayer.volume = Mathf.Clamp(this.m_playbackRate, 0, 0.5f);
         this.transform.localScale = Vector3.one * m_targetScale * (m_playbackRate);

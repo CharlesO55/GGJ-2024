@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ResultsTrigger : MonoBehaviour
@@ -15,8 +16,32 @@ public class ResultsTrigger : MonoBehaviour
 
     [SerializeField] private bool m_IsActivateOnTriggerEnter = false;
 
+
+    [SerializeField] private AudioClip m_clipToPlayAtEnd;
+    private AudioSource m_player;
+
+    void Awake()
+    {
+        if (m_clipToPlayAtEnd != null)
+        {
+            m_player = GetComponent<AudioSource>();
+
+            if (m_player == null)
+            {
+                m_player = this.AddComponent<AudioSource>();
+                m_player.playOnAwake = false;
+            }
+        }
+        
+    }
     public void ActivateResultsTrigger()
     {
+        if (this.m_player != null)
+        {
+            this.m_player.clip = this.m_clipToPlayAtEnd;
+            this.m_player.Play();
+        }
+
         if (m_IsFailTrigger)
         {
             ResultsScreenManager.Instance.ShowFailResult(m_title, m_description, m_image);
