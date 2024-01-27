@@ -45,6 +45,11 @@ public class FetusSpaceScript : MonoBehaviour
     {
         isActive = false;
         spaceIndicator.SetActive(false);
+        
+        if (this.TryGetComponent<ResultsTrigger>(out ResultsTrigger results))
+        {
+            results.ActivateResultsTrigger();
+        }
     }
 
     private void Update()
