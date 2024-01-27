@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:ProgressBar value="1" title="Words left" low-value="0" high-value="1" style="-unity-font-style: bold; font-size: 20px; -unity-text-align: upper-center; background-color: rgba(161, 52, 52, 0); align-items: stretch; align-self: auto; -unity-background-image-tint-color: rgb(255, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>
