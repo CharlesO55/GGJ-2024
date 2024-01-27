@@ -54,6 +54,8 @@ public class FetusSpaceScript : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime;
+            if(Input.GetKeyDown(KeyCode.Space)) 
+                OnInputFailed?.Invoke(this, EventArgs.Empty);
         }
         else
         {
