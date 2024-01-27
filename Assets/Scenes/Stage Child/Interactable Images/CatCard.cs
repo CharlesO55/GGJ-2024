@@ -19,7 +19,16 @@ public class CatCard : InteractableCard
         Debug.Log(other.gameObject.name);
         if (other.gameObject.GetComponent<ForkCard>() != null)
         {
-            Destroy(this.gameObject);
+            if (this.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+            {
+                rb.AddForce(Vector2.up * 100, ForceMode2D.Impulse);
+            }
+
+            rb.gravityScale = 5;
+            if (this.TryGetComponent<Collider2D>(out Collider2D collider))
+            {
+                collider.isTrigger = true;
+            }
         }
 
         if (other.CompareTag("Player"))

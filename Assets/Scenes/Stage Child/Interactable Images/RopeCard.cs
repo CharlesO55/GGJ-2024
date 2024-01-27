@@ -9,7 +9,7 @@ public class RopeCard : InteractableCard
     [SerializeField] private Vector2 m_roofLoc;
 
     [SerializeField] AudioClip m_audioClip;
-
+    [SerializeField] private AudioSource m_audioPlayer;
 
     public override void OnCardInteract(GameObject sender)
     {
@@ -20,8 +20,7 @@ public class RopeCard : InteractableCard
         sender.transform.position = new Vector3(m_roofLoc.x, m_roofLoc.y, currPos.z);
 
 
-         
+        m_audioPlayer.clip = m_audioClip;
+        m_audioPlayer.Play();
     }
-
-
 }

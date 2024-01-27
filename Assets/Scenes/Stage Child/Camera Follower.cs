@@ -28,7 +28,7 @@ public class CameraFollower : MonoBehaviour
 
         this.m_Camera.orthographicSize = 
             Mathf.Lerp(this.m_Camera.orthographicSize, 
-                5 + m_targetRb.velocity.normalized.magnitude * -m_camOffset + (m_targetRb.transform.position.y), 
+                5 + m_targetRb.velocity.normalized.magnitude * -m_camOffset + (m_targetRb.transform.position.y * 0.5f), 
                 Time.deltaTime);
 
         //this.m_Camera.orthographicSize = 5 + m_targetRb.velocity.magnitude * -m_camOffset;
