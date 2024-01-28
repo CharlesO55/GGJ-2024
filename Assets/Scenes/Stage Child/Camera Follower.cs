@@ -6,6 +6,8 @@ public class CameraFollower : MonoBehaviour
     private Rigidbody2D m_targetRb;
 
     [SerializeField] private float m_camOffset;
+    
+    [SerializeField] private float m_camYOffset;
 
     private Camera m_Camera;
 
@@ -22,6 +24,9 @@ public class CameraFollower : MonoBehaviour
     void LateUpdate()
     {
         this.transform.position = m_target.transform.position - Vector3.back * -5;
+        Vector3 newtransformPosition = transform.position;
+        newtransformPosition.y += m_camYOffset;
+        transform.position = newtransformPosition;
 
         this.m_Camera.orthographicSize = 
             Mathf.Lerp(this.m_Camera.orthographicSize, 
