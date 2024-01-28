@@ -18,6 +18,7 @@ public class OldMansfx : MonoBehaviour
 
         foreach (AudioSource src in m_AudioSources)
         {
+            src.volume = 0.3f;
             src.playOnAwake = false;
         }
     }
@@ -32,6 +33,9 @@ public class OldMansfx : MonoBehaviour
                     int rng = Random.Range(0, m_AudioClipList.Count);
 
                     src.PlayOneShot(this.m_AudioClipList[rng]);
+
+                    SpriteSpawner.Instance.m_StartShowingSprites = true;
+                    Time.timeScale = 1;
                     break;
                 }
             }
