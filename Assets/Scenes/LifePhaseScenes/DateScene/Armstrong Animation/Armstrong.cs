@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class Armstrong : DateCharacter
 {
     private Animator m_Animator;
     [SerializeField] private float m_targetScale = 1;
+
+    [SerializeField] private CinemachineVirtualCamera m_cam;
+
 
     void Awake()
     {
@@ -40,6 +44,11 @@ public class Armstrong : DateCharacter
         if (this.m_playbackRate > 0.99f)
         {
             this.GetComponent<ResultsTrigger>().ActivateResultsTrigger();
+        }
+        else if (this.m_playbackRate > .9f)
+        {
+            this.m_cam = GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>();
+            this.m_cam.m_Follow = this.transform;
         }
     }
 }

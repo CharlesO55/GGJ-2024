@@ -1,0 +1,27 @@
+VisualElement {}
+
+.TextSize{
+	font-size: 36px;
+}
+
+.ButtonLayout{
+	-unity-font-style: bold; 
+	justify-content: center; 
+	align-self: center; 
+	border-top-left-radius: 3px; 
+	border-top-right-radius: 3px; 
+	border-bottom-right-radius: 3px; 
+	border-bottom-left-radius: 3px; 
+	border-top-width: 2px; 
+	border-right-width: 2px; 
+	border-bottom-width: 2px; 
+	border-left-width: 2px; 
+	border-left-color: rgb(0, 0, 0); 
+	border-right-color: rgb(0, 0, 0); 
+	border-top-color: rgb(0, 0, 0); 
+	border-bottom-color: rgb(0, 0, 0); 
+	background-color: rgb(255, 255, 255);
+
+	width: 100%;
+	margin: 30px 50px;
+}

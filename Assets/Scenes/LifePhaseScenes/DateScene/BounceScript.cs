@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class BounceScript : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D m_rb;
     [SerializeField] private float m_force = 5;
+
 
     void Start()
     {

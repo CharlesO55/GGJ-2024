@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scenes/LifePhaseScenes/Visual%20Novel/UIVisualNovel.uss?fileID=7433441132597879392&amp;guid=76c15593a7af1674fa0c1b40879d7cc3&amp;type=3#UIVisualNovel" />
+    <ui:VisualElement name="Screen" style="flex-grow: 1;">
+        <ui:VisualElement name="Buttons" style="flex-grow: 1; margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto; justify-content: center;">
+            <ui:Button text="Choice 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Choice1" class="TextSize ButtonLayout" />
+            <ui:Button text="Choice 2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Choice2" class="TextSize ButtonLayout" style="text-overflow: ellipsis;" />
+            <ui:Button text="Choice 3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Choice3" class="TextSize ButtonLayout" style="text-overflow: ellipsis;" />
+            <ui:Button text="Choice 4" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Choice4" class="TextSize ButtonLayout" style="text-overflow: ellipsis;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="DialoguePanel" style="flex-grow: 1; background-color: rgb(255, 255, 255); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; max-height: 265px;">
+            <ui:Label tabindex="-1" text="Speaker" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Speaker" class="TextSize" style="-unity-font-style: bold;" />
+            <ui:Label tabindex="-1" text="Text" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogueText" class="TextSize" style="-unity-font-style: bold;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
