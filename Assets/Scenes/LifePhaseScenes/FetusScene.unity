@@ -540,7 +540,7 @@ MonoBehaviour:
   m_title: Another Chance
   m_description: I wanna go back in
   m_IsFailTrigger: 0
-  m_nextSceneIndex: 1
+  m_nextSceneIndex: 2
   m_IsActivateOnTriggerEnter: 0
   m_clipToPlayAtEnd: {fileID: 0}
 --- !u!1 &981127108
@@ -1492,7 +1492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2129624809
 RectTransform:
   m_ObjectHideFlags: 0

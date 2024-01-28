@@ -1142,7 +1142,7 @@ MonoBehaviour:
   m_title: Date completed
   m_description: Glad it's over
   m_IsFailTrigger: 0
-  m_nextSceneIndex: 3
+  m_nextSceneIndex: 4
   m_IsActivateOnTriggerEnter: 0
   m_clipToPlayAtEnd: {fileID: 0}
 --- !u!1 &679783976

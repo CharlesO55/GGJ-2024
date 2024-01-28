@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_title: Good end
   m_description: Completed
   m_IsFailTrigger: 0
-  m_nextSceneIndex: 2
+  m_nextSceneIndex: 3
   m_IsActivateOnTriggerEnter: 1
   m_clipToPlayAtEnd: {fileID: 0}
 --- !u!1 &638648233
