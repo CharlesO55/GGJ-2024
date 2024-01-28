@@ -32,6 +32,6 @@ public class CoinSpawner : MonoBehaviour
         baseArea.x += Random.Range(-m_spawnAreas[rng].size.x, m_spawnAreas[rng].size.x);
         baseArea.y += Random.Range(-m_spawnAreas[rng].size.y, m_spawnAreas[rng].size.y);
 
-        Instantiate(m_coinPrefab, baseArea, Quaternion.identity);
+        Instantiate(m_coinPrefab, baseArea, Quaternion.identity, this.transform);
     }
 }
