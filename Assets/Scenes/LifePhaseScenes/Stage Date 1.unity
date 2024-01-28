@@ -642,8 +642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d5c9c1f53090f40a21fac9f10c751b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 15
-  m_edgeSize: 50
+  m_speed: 5
+  m_edgeSize: 30
   m_transformLimit: {x: 13, y: 4}
 --- !u!1 &539869788
 GameObject:
@@ -2454,7 +2454,6 @@ MonoBehaviour:
   m_playbackTime: 0
   m_Child: {fileID: 0}
   m_targetScale: 3
-  m_cam: {fileID: 0}
 --- !u!114 &1734206528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2469,7 +2468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_image: {fileID: 2800000, guid: fffc9193135d9044ca78e885c2137f2f, type: 3}
   m_title: The mother of all omelettes
-  m_description: War is eternal. Women are temporary, Jack.
+  m_description: Never mess with a politician standing to make history
   m_IsFailTrigger: 1
   m_nextSceneIndex: 0
   m_IsActivateOnTriggerEnter: 0
