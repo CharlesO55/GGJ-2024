@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using BukoClimbers;
 using Unity.VisualScripting;
 using UnityEngine;
 

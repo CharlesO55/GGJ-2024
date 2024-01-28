@@ -1,5 +1,3 @@
-using System;
-using System.Threading;
 using BukoClimbers;
 using UnityEngine;
 

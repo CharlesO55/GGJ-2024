@@ -1,5 +1,3 @@
-using BukoClimbers;
-using Cinemachine;
 using UnityEngine;
 
 public class RopeCard : InteractableCard

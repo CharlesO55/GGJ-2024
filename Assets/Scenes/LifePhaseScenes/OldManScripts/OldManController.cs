@@ -1,4 +1,3 @@
-using BukoClimbers;
 using UnityEngine;
 
 public class OldManController : MonoBehaviour
