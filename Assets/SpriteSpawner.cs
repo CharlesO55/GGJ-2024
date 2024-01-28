@@ -33,6 +33,8 @@ public class SpriteSpawner : MonoBehaviour
             m_currSpriteIndex = 0;
         }
 
+
+        Time.timeScale = 1;
         return this.m_sprites[m_currSpriteIndex];
     }
 

@@ -35,7 +35,6 @@ public class OldMansfx : MonoBehaviour
                     src.PlayOneShot(this.m_AudioClipList[rng]);
 
                     SpriteSpawner.Instance.m_StartShowingSprites = true;
-                    Time.timeScale = 1;
                     break;
                 }
             }
