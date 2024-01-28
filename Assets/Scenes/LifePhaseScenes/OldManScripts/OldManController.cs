@@ -1,3 +1,4 @@
+using BukoClimbers;
 using UnityEngine;
 
 public class OldManController : MonoBehaviour
@@ -7,9 +8,12 @@ public class OldManController : MonoBehaviour
     [SerializeField] private float step = 100f;
 
     [SerializeField] private LayerMask obstacleLayerMask;
+
+    [SerializeField] private ResultsTrigger m_externalTrigger;
     private void Start()
     {
         movePoint.parent = null;
+
     }
 
     private void Update()
@@ -40,10 +44,13 @@ public class OldManController : MonoBehaviour
 
     public void Kill()
     {
+        m_externalTrigger.ActivateResultsTrigger();
+
         gameObject.SetActive(false);
-        if (this.TryGetComponent<ResultsTrigger>(out ResultsTrigger results))
+        /*if (this.TryGetComponent<ResultsTrigger>(out ResultsTrigger results))
         {
             results.ActivateResultsTrigger();
-        }
+        }*/
+
     }
 }
