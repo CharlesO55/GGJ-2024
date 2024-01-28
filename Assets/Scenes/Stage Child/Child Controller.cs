@@ -28,7 +28,6 @@ public class ChildController : MonoBehaviour
             this.m_InteractableCard.OnCardInteract(this.gameObject);
         }
 
-        
     }
 
     void FixedUpdate()
