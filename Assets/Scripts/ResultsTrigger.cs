@@ -54,7 +54,7 @@ public class ResultsTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (this.m_IsActivateOnTriggerEnter)
+        if (this.m_IsActivateOnTriggerEnter && other.CompareTag("Player"))
             this.ActivateResultsTrigger();
     }
 }

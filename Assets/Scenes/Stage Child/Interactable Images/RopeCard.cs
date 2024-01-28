@@ -9,14 +9,14 @@ public class RopeCard : InteractableCard
     [SerializeField] AudioClip m_audioClip;
     [SerializeField] private AudioSource m_audioPlayer;
 
-    [SerializeField] private CinemachineVirtualCamera roofVC;
+    //[SerializeField] private CinemachineVirtualCamera roofVC;
 
     public override void OnCardInteract(GameObject sender)
     {
         base.OnCardInteract(sender);
-
+       //CameraSwitcher.SwitchCamera(roofVC);
         Vector3 currPos = sender.transform.position;
-        CameraSwitcher.SwitchCamera(roofVC);
+        
 
         sender.transform.position = new Vector3(m_roofLoc.x, m_roofLoc.y, currPos.z);
         

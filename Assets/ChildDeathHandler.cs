@@ -4,23 +4,21 @@ using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
-public class ChildTruckDeathHandler : MonoBehaviour
+public class ChildDeathHandler : MonoBehaviour
 {
-    [SerializeField] private Sprite deathSprite;
     private SpriteRenderer sr;
     private void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
     }
 
-    private void ChangeSprite()
+    private void ChangeSprite(Sprite deathSprite)
     {
         sr.sprite = deathSprite;
     }
 
-    public void HandleDeath(Transform roadTransform)
+    public void HandleDeath(Sprite deathSprite)
     {
-        Destroy(rb);
-        ChangeSprite();
+        ChangeSprite(deathSprite);
     }
 }

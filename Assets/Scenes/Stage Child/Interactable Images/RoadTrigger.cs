@@ -6,6 +6,8 @@ using UnityEngine;
 public class RoadTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject truckKun;
+    [SerializeField] private Sprite deathSprite;
+    [SerializeField] private GameObject blocker;
     private float timer = 2f;
 
     private bool isTriggered = false;
@@ -22,7 +24,7 @@ public class RoadTrigger : MonoBehaviour
         }
         if (timer < 0)
         {
-            player.transform.GetComponent<ChildTruckDeathHandler>().HandleDeath(transform);
+            player.transform.GetComponent<ChildDeathHandler>().HandleDeath(deathSprite);
             truckKun.SetActive(true);
         }
         else
@@ -35,8 +37,10 @@ public class RoadTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            blocker.SetActive(true);
             player = other;
             isTriggered = true;
+            
         }
     }
 }
