@@ -22,7 +22,7 @@ public class RoadTrigger : MonoBehaviour
         }
         if (timer < 0)
         {
-            player.transform.GetChild(0).gameObject.SetActive(false);
+            player.transform.GetComponent<ChildTruckDeathHandler>().HandleDeath(transform);
             truckKun.SetActive(true);
         }
         else

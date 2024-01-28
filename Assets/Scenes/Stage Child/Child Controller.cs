@@ -41,8 +41,8 @@ public class ChildController : MonoBehaviour
             this.m_Move.y = 0f;
         }
 
-
-        this.m_rb.AddForce(m_Move * m_SpeedMultiplier * Time.deltaTime);
+        if(m_rb != null)
+            this.m_rb.AddForce(m_Move * m_SpeedMultiplier * Time.deltaTime);
         //this.m_rb.velocity = this.m_Move * m_SpeedMultiplier * Time.deltaTime;
     }
 
